@@ -1,0 +1,30 @@
+body{
+    margin: 0%;
+    background-color: black;
+}
+h1{
+    text-align: center;
+    color: #EA9367;
+}
+h2{
+    color: #FFD662;
+}
+p{
+    color: #C1CBEA;
+}
+#play{
+    border: 0px;
+    color: #A1D662;
+    font-size: 30px;
+    background-color: black;
+}
+#play:hover{
+    color: #00AB67;
+    font-size:larger;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

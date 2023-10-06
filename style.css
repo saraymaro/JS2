@@ -1,0 +1,27 @@
+
+  .box {
+    border: 2px solid #335B3C;
+    width: 250px;
+    height: 50px;
+    margin: 5px;
+    background-color: #C0DFC7;
+    color: #4D594F;
+}
+legend{
+    font-weight: bold;
+}
+
+button{
+    color: #4D594F;
+    background-color: #79D98E;
+    border: 1px solid #335B3C;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+input{
+    background-color: #CCE6B2;
+    border: 2px dashed #79D98E;
+}

@@ -25,3 +25,7 @@ input{
     background-color: #CCE6B2;
     border: 2px dashed #79D98E;
 }
+button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

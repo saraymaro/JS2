@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
-      voluptatibus quidem veritatis numquam. Ad sunt quia doloremque sapiente.
-      Quisquam provident eius repellat ipsum nam eaque omnis deleniti doloremque
-      nisi et.
-    </p>
+    <h2>Elige una opción</h2>
+    <div id="contadores">
+    <div id="conPlayer">
+    <p class="p1">Tú</p>
+    <p class="p2">Partidas ganadas</p>
+    <p id="contador">0</p>
+  </div>
+  <div id="conPC">
+    <p class="p3">PC</p>
+    <p class="p4">Partidas ganadas</p>
+    <p id="contadorPC">0</p>
+  </div>
+</div>
+    <div id="juego">
+      <button id="piedra"><img src="img/piedra3.png" alt="" /></button>
+      <button id="papel"><img src="img/papel.png" alt=""></button>
+      <button id="tijeras"><img src="img/tijera1.png" alt="" /></button>
+    </div>
+    <div id="resultado"></div>
     <script src="main2.js"></script>
   </body>
 </html>

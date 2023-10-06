@@ -3,24 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>¡Bienvenido a piedra papel o tijera!</h1>
-    <h2>Cómo se juega</h2>
+    <h2 class="h2">Cómo se juega</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptate
-      tempora a nemo voluptatibus quaerat, cupiditate obcaecati aliquam,
-      reprehenderit dolorem quibusdam sit. Esse officiis cumque quidem, dolorem
-      quaerat maxime. Itaque? Quidem autem cum ab culpa nisi provident
-      doloremque laborum ullam nostrum voluptas, repellat asperiores saepe
-      cupiditate consectetur omnis quod at commodi, error modi. Officiis sunt
-      temporibus corporis voluptate ut quidem.
+      <ol>
+        <li>Cada jugador elige una de las tres opciones: "Piedra," "Papel" o "Tijera."</li>
+        <li>Las reglas para determinar al ganador son las siguientes:</li>
+          <ul>
+            <li>Piedra contra Tijera (Piedra gana).</li>
+            <li>Tijera contra Papel (Tijera gana).</li>
+            <li>Papel contra Piedra (Papel gana).</li>
+          </ul> 
+        <li>Si se elige la misma opción, es empate.</li>
+      </ol>
     </p>
-    <div>
+    <div class="containerPlay">
     <h2>¿Quieres jugar? ¡Dale al Play!</h2>
+    <div class="flechaPlay">
+      <p class="flecha"> 👉👉 </p>
     <button id="play">Play</button>
+    <p class="flecha"> 👈👈 </p>
+  </div>
 </div>
     <script src="main.js"></script>
   </body>

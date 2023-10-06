@@ -1,30 +1,49 @@
 body{
     margin: 0%;
     background-color: black;
+    font-family: 'Satisfy', cursive;
 }
 h1{
     text-align: center;
     color: #EA9367;
+
 }
 h2{
     color: #FFD662;
 }
-p{
-    color: #C1CBEA;
+.h2{
+    margin-left: 40px;
+}
+ul,li{
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 #play{
     border: 0px;
     color: #A1D662;
-    font-size: 30px;
-    background-color: black;
+    font-size: 50px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-family: 'Satisfy', cursive;
 }
 #play:hover{
-    color: #00AB67;
-    font-size:larger;
+text-shadow: 0px 0px 10px white;
+font-weight: 700;
+cursor: pointer;
 }
-div{
+
+.containerPlay{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+}
+.flechaPlay{
+    display: flex;
+    align-items: center;
+}
+.flecha{
+    font-size: 30px;
+    text-shadow: 0px 0px 5px #FFD662;
 }

@@ -1,0 +1,54 @@
+#cardfront, #cardback, .card, #cardfront1, #cardback1, .card2 {
+    width: 220px;
+    height: 320px;
+  }
+  
+  #cardfront, #cardback {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  #cardfront1, #cardback1{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 230px;
+  }
+  
+   #cardback, #cardback1{
+    z-index: 2;
+    transform: rotateY(0deg);
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+  
+  #cardfront, #cardfront1 {
+    transition: all 0.3s linear;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+  .card:hover #cardback {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover #cardfront {
+    transform: rotateY(360deg);
+  }
+  .card, .card2{
+    display: inline-flex
+  }
+  .card2:hover #cardback1 {
+    transform: rotateY(180deg);
+  }
+  
+  .card2:hover #cardfront1 {
+    transform: rotateY(360deg);
+  }

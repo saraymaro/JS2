@@ -29,12 +29,34 @@ body{
     grid-column: 2;
     grid-row: 2;
 }
-#tama{
+/* Imagen central */
+#tama-container {
     position: absolute;
-    width: 200px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#tama {
+    width: 200px;
+    animation: moveImage 4s linear infinite;
+    -webkit-animation: moveImage 4s linear infinite;
+}
+@keyframes moveImage {
+    0% {
+        transform: translate(0, 0); /* Posición inicial */
+      }
+      25% {
+        transform: translate(5px, -5px); /* Mover en diagonal hacia arriba 5px */
+      }
+      50% {
+        transform: translate(10px, 0); /* Regresar a la posición original */
+      }
+      75% {
+        transform: translate(5px, 5px); /* Mover en diagonal hacia abajo 5px */
+      }
+      100% {
+        transform: translate(0, 0); /* Regresar a la posición original */
+      }
 }
 /* Barras progreso */
 #myProgressG, #myProgressY {
@@ -48,6 +70,8 @@ body{
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5)
 }
 #myProgressR, #myProgressB{
     position: relative;
@@ -60,6 +84,7 @@ body{
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5)
 }
 #myProgressG{
     background-color: lightgreen;
@@ -79,10 +104,11 @@ body{
 }
 #myBarG, #myBarB, #myBarY, #myBarR {
     position: absolute;
-    width: 1%;
+    width: 10%;
     height: 100%;
     transition: width 0.3s;
 }
+/* Botones */
 #chuche, #brocoli, #pollo{
     width: 40px;
     height: 40px;
@@ -97,6 +123,11 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
+#chuche:hover, #brocoli:hover, #pollo:hover{
+    background-color: lightseagreen;
+    transform: scale(0.90);
 }
 #chuche img, #brocoli img{
     width: 30px;
@@ -117,6 +148,11 @@ body{
     display: flex;
     justify-content: center;
     cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
+#deberes:hover, #amistad:hover, #burla:hover{
+    background-color: khaki;
+    transform: scale(0.90);
 }
 #deberes img{
     width: 28px;
@@ -141,6 +177,11 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
+#futbol:hover, #game:hover, #ducha:hover{
+    background-color: crimson;
+    transform: scale(0.90);
 }
 #futbol img{
     width: 30px;
@@ -164,7 +205,11 @@ body{
     display: flex;
     justify-content: center;
     cursor: pointer;
-
+    box-shadow: 0px 0px 10px black;
+}
+#dormir:hover, #enfado:hover, #cuento:hover{
+    background-color: darkturquoise;
+    transform: scale(0.90);
 }
 #dormir img{
     width: 35px;
@@ -179,14 +224,16 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+/* Barra progreso felicidad */
 #myProgressP {
     position: absolute;
-    width: 60%;
-    height: 30px;
+    width: 40%;
+    height: 15px;
     background-color: lightcyan;
     border: 1px dashed darkcyan;
-    top: 65vh;
-    left: 20vw;
+    top: 67vh;
+    left: 30vw;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5)
 }
 #myBarP {
     position: absolute;
@@ -194,5 +241,9 @@ body{
     height: 100%;
     background-color: darkcyan;
     transition: width 0.3s; 
-    }
-    
+}
+/* Texto barras */
+#alimentacion{
+    position: absolute;
+    top: ;
+}

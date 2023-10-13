@@ -190,7 +190,25 @@ document.getElementById("dormir")!.addEventListener("click", updateHappiness);
 document.getElementById("cuento")!.addEventListener("click", updateHappiness);
 document.getElementById("enfado")!.addEventListener("click", updateHappiness);
 
-updateHappiness();
+function updateHappiness() {
+    const felicidad = calcularFelicidad();
+    const felicidadBar = document.getElementById("myBarP");
+    felicidadBar.style.width = felicidad + "%";
+    felicidadBar.style.backgroundColor = getColorForHappiness(felicidad);
+
+    // Verifica si la felicidad es mayor del 50% y cambia la imagen del niño
+    const ninoImage = document.getElementById("tama");
+    if (felicidad > 50) {
+        ninoImage.src = "img/saludo.png"; // Cambia la imagen del niño
+    } else {
+        ninoImage.src = "img/niño.png"; // Restaura la imagen original si la felicidad es 50% o menos
+    }
+}
+
+
+
+
+
 // REVISAR RANDOM PRINCIPIO
 
 

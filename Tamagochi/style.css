@@ -35,6 +35,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 20px;
 }
 #tama {
     width: 200px;
@@ -227,12 +228,12 @@ body{
 /* Barra progreso felicidad */
 #myProgressP {
     position: absolute;
-    width: 40%;
+    width: 20%;
     height: 15px;
     background-color: lightcyan;
     border: 1px dashed darkcyan;
-    top: 67vh;
-    left: 30vw;
+    top: 48.5vh;
+    left: 15vw;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5)
 }
 #myBarP {

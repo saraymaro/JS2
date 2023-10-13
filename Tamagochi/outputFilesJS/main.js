@@ -192,7 +192,8 @@ document.getElementById("game").addEventListener("click", updateHappiness);
 document.getElementById("dormir").addEventListener("click", updateHappiness);
 document.getElementById("cuento").addEventListener("click", updateHappiness);
 document.getElementById("enfado").addEventListener("click", updateHappiness);
-updateHappiness();
+
+
 // REVISAR RANDOM PRINCIPIO
 // prueba DnD
 // let isDragging = false;

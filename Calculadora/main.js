@@ -86,3 +86,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+// cambiar de color
+var btn = document.querySelector("#colorO");
+
+btn.addEventListener('click', function(){
+// btn.onclick = function () {
+    window.location.href = 'Dark.html';
+})
+var btn = document.querySelector("#colorC");
+
+btn.addEventListener('click', function(){
+// btn.onclick = function () {
+    window.location.href = 'Light.html';
+})
+var btn = document.querySelector("#colorD");
+
+btn.addEventListener('click', function(){
+// btn.onclick = function () {
+    window.location.href = 'Diferent.html';
+})

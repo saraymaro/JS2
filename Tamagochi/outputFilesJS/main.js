@@ -1,6 +1,5 @@
 "use strict";
 var _a, _b;
-// botones pantalla verde
 function movegreen(action) {
     var elem = document.getElementById("myBarG");
     var width = parseInt(elem.style.width) || getRandomG(30, 60);
@@ -17,7 +16,6 @@ function movegreen(action) {
         width = 0;
     }
     elem.style.width = width + '%';
-    // Cambiar el color de fondo en función del rango de valores
     if (width >= 0 && width <= 30) {
         elem.style.backgroundColor = 'red';
     }
@@ -44,7 +42,7 @@ document.getElementById("chuche").addEventListener("click", function () {
 // botones pantalla amarilla
 function moveyellow(action) {
     const elem = document.getElementById("myBarY");
-    var width = parseInt(elem.style.width) || getRandomY(30, 60); // Generar valor aleatorio entre 30 y 60
+    let width = parseInt(elem.style.width) || getRandomY(30, 60); // Inicializa con un valor aleatorio entre 30 y 60
     if (action == "increment") {
         width += 10;
     }
@@ -64,13 +62,16 @@ function moveyellow(action) {
     else if (width > 30 && width < 60) {
         elem.style.backgroundColor = "orange";
     }
-    else if (width > 60) {
+    else if (width >= 60) {
         elem.style.backgroundColor = "green";
     }
 }
 function getRandomY(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+document.addEventListener("DOMContentLoaded", function () {
+    moveyellow(null);
+});
 document.getElementById("deberes").addEventListener("click", function () {
     moveyellow("increment");
 });
@@ -83,11 +84,11 @@ document.getElementById("burla").addEventListener("click", function () {
 // botones pantalla roja
 function movered(action) {
     const elem = document.getElementById("myBarR");
-    var width = parseInt(elem.style.width) || 0;
-    if (action == "increment") {
+    let width = parseInt(elem.style.width) || getRandomR(30, 60);
+    if (action === "increment") {
         width += 10;
     }
-    else if (action == "decrement") {
+    else if (action === "decrement") {
         width -= 10;
     }
     if (width > 100) {
@@ -103,10 +104,16 @@ function movered(action) {
     else if (width > 30 && width < 60) {
         elem.style.backgroundColor = "orange";
     }
-    else if (width > 60) {
+    else if (width >= 60) {
         elem.style.backgroundColor = "green";
     }
 }
+function getRandomR(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+document.addEventListener("DOMContentLoaded", function () {
+    movered(null);
+});
 document.getElementById("futbol").addEventListener("click", function () {
     movered("increment");
 });
@@ -119,11 +126,11 @@ document.getElementById("ducha").addEventListener("click", function () {
 // botones pantalla azul
 function moveblue(action) {
     const elem = document.getElementById("myBarB");
-    var width = parseInt(elem.style.width) || 0;
-    if (action == "increment") {
+    let width = parseInt(elem.style.width) || getRandomB(30, 60);
+    if (action === "increment") {
         width += 10;
     }
-    else if (action == "decrement") {
+    else if (action === "decrement") {
         width -= 10;
     }
     if (width > 100) {
@@ -139,10 +146,16 @@ function moveblue(action) {
     else if (width > 30 && width < 60) {
         elem.style.backgroundColor = "orange";
     }
-    else if (width > 60) {
+    else if (width >= 60) {
         elem.style.backgroundColor = "green";
     }
 }
+function getRandomB(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+document.addEventListener("DOMContentLoaded", function () {
+    moveblue(null);
+});
 document.getElementById("dormir").addEventListener("click", function () {
     moveblue("increment");
 });
@@ -152,13 +165,12 @@ document.getElementById("cuento").addEventListener("click", function () {
 (_b = document.getElementById("enfado")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () {
     moveblue("decrement");
 });
-// barra felicidad
+// Barra de felicidad
 function calcularFelicidad() {
     const alimentacion = parseInt(document.getElementById("myBarG").style.width) || 0;
     const colegio = parseInt(document.getElementById("myBarY").style.width) || 0;
     const casa = parseInt(document.getElementById("myBarR").style.width) || 0;
     const noche = parseInt(document.getElementById("myBarB").style.width) || 0;
-    // Puedes ajustar esta fórmula según tus necesidades
     const felicidad = (alimentacion + colegio + casa + noche) / 4;
     return felicidad;
 }
@@ -179,7 +191,9 @@ function getColorForHappiness(felicidad) {
         return "green";
     }
 }
-// Llama a la función para actualizar la felicidad cuando cambia una de las otras barras
+document.addEventListener("DOMContentLoaded", function () {
+    updateHappiness(null);
+});
 document.getElementById("brocoli").addEventListener("click", updateHappiness);
 document.getElementById("pollo").addEventListener("click", updateHappiness);
 document.getElementById("chuche").addEventListener("click", updateHappiness);
@@ -192,41 +206,19 @@ document.getElementById("game").addEventListener("click", updateHappiness);
 document.getElementById("dormir").addEventListener("click", updateHappiness);
 document.getElementById("cuento").addEventListener("click", updateHappiness);
 document.getElementById("enfado").addEventListener("click", updateHappiness);
-
-
-// REVISAR RANDOM PRINCIPIO
-// prueba DnD
-// let isDragging = false;
-//     let clickEvent;
-//     function performAction(event) {
-//       if (isDragging) {
-//         // Simular un evento de clic si se soltó después de arrastrar
-//         document.getElementById('chuche').dispatchEvent(clickEvent);
-//         isDragging = false;
-//       } else {
-//         // Realizar la funcionalidad de clic normal
-//         alert('Función al hacer clic');
-//       }
-//     }
-//     function dragStart(event) {
-//       isDragging = true;
-//       // Simular un evento de clic en caso de que se suelte después de arrastrar
-//       clickEvent = new MouseEvent('click', {
-//         bubbles: true,
-//         cancelable: true,
-//         view: window
-//       });
-//     }
-//     document.getElementById('tama-container').addEventListener('dragover', function (event) {
-//       event.preventDefault();
-//     });
-//     document.getElementById('tama-container').addEventListener('drop', function (event) {
-//       event.preventDefault();
-//       let data = event.dataTransfer.getData('text/plain');
-//       let element = document.getElementById(data);
-//       // Restaurar la posición del botón al soltarlo
-//       element.style.top = '0px';
-//       element.style.left = '0px';
-//       event.target.appendChild(element);
-//       performAction(event); // Ejecutar la funcionalidad al soltarlo en la imagen
-//     }
+function updateHappiness() {
+    const felicidad = calcularFelicidad();
+    const felicidadBar = document.getElementById("myBarP");
+    felicidadBar.style.width = felicidad + "%";
+    felicidadBar.style.backgroundColor = getColorForHappiness(felicidad);
+    const ninoImage = document.getElementById("tama");
+    if (felicidad > 60) {
+        ninoImage.src = "img/saludo.png";
+    }
+    else if (felicidad < 30) {
+        ninoImage.src = "img/sad.png";
+    }
+    else {
+        ninoImage.src = "img/niño.png";
+    }
+}

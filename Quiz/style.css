@@ -1,0 +1,21 @@
+
+#containerQ{
+    width: 70%;
+    height: 20px;
+}
+#containerOptions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#option{
+    width: 150px;
+    margin-bottom: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+#next{
+    margin-top: 10px;
+    cursor: pointer;
+}

@@ -3,6 +3,8 @@ body{
     display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
+        font-family: 'Tilt Neon', sans-serif;
+        font-weight: bold;
 }
 #tl, #tr, #bl, #br{
     width: 100%;
@@ -78,7 +80,7 @@ body{
     position: relative;
     width: 80%;
     height: 30px;
-    top: 225px;
+    top: 90px;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -120,11 +122,10 @@ body{
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     box-shadow: 0px 0px 10px black;
+    display: flex;
+    justify-content: center;
 }
 #chuche:hover, #brocoli:hover, #pollo:hover{
     background-color: lightseagreen;
@@ -175,10 +176,14 @@ body{
     -o-border-radius: 20px;
     background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;align-items: center;
     cursor: pointer;
     box-shadow: 0px 0px 10px black;
+}
+#btnR, #btnB{
+    display: flex;
+    align-items: end;
+    margin-bottom: 30px;
 }
 #futbol:hover, #game:hover, #ducha:hover{
     background-color: crimson;
@@ -230,8 +235,8 @@ body{
     position: absolute;
     width: 20%;
     height: 15px;
-    background-color: lightcyan;
-    border: 1px dashed darkcyan;
+    background-color:#D5A3F0;
+    border: 1px dashed #9A37AD;
     top: 48.5vh;
     left: 15vw;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5)
@@ -240,11 +245,36 @@ body{
     position: absolute;
     width: 1%;
     height: 100%;
-    background-color: darkcyan;
     transition: width 0.3s; 
 }
 /* Texto barras */
-#alimentacion{
-    position: absolute;
-    top: ;
+#alimentacion, #colegio {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
 }
+#casa, #noche{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    font-size: 20px;
+}
+#felicidad{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #712980;
+}
+#alimentacion{
+    color: darkolivegreen;
+}
+#colegio{
+    color: goldenrod;
+}
+#casa{
+    color: crimson;
+}
+#noche{
+    color: darkcyan;
+}
+

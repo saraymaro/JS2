@@ -1,7 +1,14 @@
-
-#containerQ{
-    width: 70%;
-    height: 20px;
+body{
+    margin: 0%;
+    background-color: #C65FEB;
+}
+h1{
+    text-align: center;
+}
+#question{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
 }
 #containerOptions{
     display: flex;
@@ -10,12 +17,22 @@
     justify-content: center;
 }
 #option{
-    width: 150px;
+    width: 200px;
     margin-bottom: 5px;
     height: 40px;
     cursor: pointer;
+    font-size: 15px;
+    background-color: #E8A03A;
+    border-radius: 10px;
+    border: 2px solid black;
 }
+#option:hover{
+background-color: #EA741A;
+}
+
 #next{
     margin-top: 10px;
-    cursor: pointer;
+    cursor: pointer;background-color: #6CED26;
+    border: 1px solid black;
+    border-radius: 10px;
 }

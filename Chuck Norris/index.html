@@ -7,9 +7,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <div> <img src="img/chuck.png" alt="">
+      <div id="dfrase"> <img src="img/chuck.png" alt="">
         <p id="frase">Haz clic en el botón para obtener una frase de Chuck Norris.</p>
         <button id="btn">Next</button>
+      </div>
+
+      <div id="dcategoria"> <img src="img/chuck.png" alt="">
+        <p id="fraseC">Haz clic en la categoría que quieras para obtener una frase de Chuck Norris.</p>
+        <select id="category-select">
+        <option value="animal">Animal</option>
+        <option value="career">Career</option>
+        <option value="celebrity">Celebrity</option>
+        <option value="dev">Dev</option>
+        <option value="explicit">Explicit</option>
+        <option value="fashion">Fashion</option>
+        <option value="food">Food</option>
+        <option value="history">History</option>
+        <option value="animal">Animal</option>
+        <option value="money">Money</option>
+        <option value="movie">Movie</option>
+        <option value="music">Music</option>
+        <option value="political">Political</option>
+        <option value="religion">Religion</option>
+        <option value="science">Science</option>
+        <option value="sport">Sport</option>
+        <option value="travel">Travel</option>
+      </select>
+      <button id="btnC">Obtener frase</button>
+      </div>
+
+      <div id="Tfrase"> <img id="imgT" src="img/chuck.png" alt="">
+        <div id="containerT">
+        <input type="search" name="palabra" placeholder="Ingresa una palabra..." id="search">
+        <button id="btnG">Go</button>
+        <p id="fraseT">Ingresa una palabra para obtener una frase de Chuck Norris donde se encuentre.</p>
+      </div>
       </div>
     <script src="main.js"></script>
   </body>

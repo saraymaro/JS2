@@ -29,3 +29,18 @@ btnB.addEventListener("click", () => {
         reproduciendoB = true;
     }
 });
+// guitarra acustica
+const btnG = document.getElementById("guitarra");
+const guitarraAudio = document.getElementById("audioG");
+let reproduciendoG = false;
+btnG.addEventListener("click", () => {
+    if (reproduciendoG) {
+        guitarraAudio.pause();
+        reproduciendoG = false;
+    }
+    else {
+        guitarraAudio.setAttribute("src", "sonidos/guitarra.mp3");
+        guitarraAudio.play();
+        reproduciendoG = true;
+    }
+});

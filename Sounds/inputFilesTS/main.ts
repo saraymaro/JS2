@@ -45,3 +45,33 @@ btnG.addEventListener("click", () =>{
         reproduciendoG = true;
     }
 })
+// bajo
+const btnBJ: any = document.getElementById("bajo");
+const bajoAudio: any = document.getElementById("audioBJ");
+let reproduciendoBJ = false;
+
+btnBJ.addEventListener("click", ()=>{
+    if (reproduciendoBJ) {
+        bajoAudio.pause();
+        reproduciendoBJ = false;
+    } else {
+        bajoAudio.setAttribute("src", "sonidos/bajo.mp3");
+        bajoAudio.play();
+        reproduciendoBJ = true;
+    } 
+})
+// guitarra eléctrica
+const btnGE: any = document.getElementById("gelectrica");
+const gelectricaAudio: any = document.getElementById("audioGE")
+let reproduciendoGE = false;
+
+btnGE.addEventListener("click", ()=>{
+    if (reproduciendoGE) {
+        gelectricaAudio.pause();
+        reproduciendoGE = false;
+    } else {
+        gelectricaAudio.setAttribute("src", "sonidos/guitarra-electrica.mp3");
+        gelectricaAudio.play();
+        reproduciendoGE = true;
+    }
+})

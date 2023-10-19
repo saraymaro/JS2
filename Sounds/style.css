@@ -1,0 +1,86 @@
+body{
+    background-image: url(img/inst-modified.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 50% 50%;
+}
+button, img{
+    width: 120px;   
+}
+button{
+    background-color: transparent;
+    border: 0;
+    color: transparent;
+}
+button img:hover{
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+#piano img{
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px white;
+    width: 150px;
+}
+#piano:hover{
+    color:white;
+    font-weight: bold;
+}
+#guitarra{
+    grid-column: 2;
+    grid-row: 2;
+}
+#guitarra:hover{
+    color:burlywood;
+    font-weight: bold;
+}
+#guitarra img{
+    width: 175px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px burlywood;
+}
+#bateria{
+    grid-column: 3;
+    grid-row: 1;
+}
+#bateria:hover{
+    color: salmon;
+    font-weight: bold;
+}
+#bateria img{
+    width: 175px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px salmon
+}
+#bajo{
+    grid-column: 4;
+    grid-row: 2;
+}
+#bajo:hover{
+    color:cornflowerblue;
+    font-weight: bold;
+}
+#bajo img{
+    width: 145px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px cornflowerblue;
+}
+#gelectrica{
+    grid-column: 5;
+    grid-row: 1;
+    background-color: transparent;
+}
+#gelectrica:hover{
+    color:violet;
+    font-weight: bold;
+}
+#gelectrica img{
+    width: 145px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px violet
+}

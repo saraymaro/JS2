@@ -174,7 +174,7 @@ function calcularFelicidad() {
     const felicidad = (alimentacion + colegio + casa + noche) / 4;
     return felicidad;
 }
-function updateHappiness() {
+function updateHappiness(someArgument) {
     const felicidad = calcularFelicidad();
     const felicidadBar = document.getElementById("myBarP");
     felicidadBar.style.width = felicidad + "%";

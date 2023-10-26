@@ -1,9 +1,9 @@
 // Boton on off + options + encender apagar bombilla
-const btnoff = document.querySelector("#boff")!;
-const options = document.querySelector("#options")!;
-const btnon = document.querySelector("#bon")!;
-const ioff = document.querySelector("#bomoff")!;
-const ion = document.querySelector("#bomon")!;
+const btnoff : any = document.querySelector("#boff")!;
+const options: any= document.querySelector("#options")!;
+const btnon: any = document.querySelector("#bon")!;
+const ioff: any = document.querySelector("#bomoff")!;
+const ion :any = document.querySelector("#bomon")!;
 btnoff.addEventListener("click", () => {
     options.style.display = "block";
     btnon.style.display = "block";
@@ -19,8 +19,8 @@ btnon.addEventListener("click", () => {
     ion.style.display = "none";
 });
 // Hacer zoom y nivel de luz
-const rz = document.querySelector("#rzoom")!;
-const rl = document.querySelector("#rlevel")!;
+const rz : any = document.querySelector("#rzoom");
+const rl : any = document.querySelector("#rlevel")!;
 rz.addEventListener("input", () => {
     const escalar = 1 / rz.value;
     ion.style.transform = `scale(${escalar})`;
@@ -31,10 +31,11 @@ rl.addEventListener("input", () => {
     ion.style.opacity = opacidad;
     });
 // Hacer que la imagen rote
-const rr =document.querySelector("#rrot")!;
+const rr : any =document.querySelector("#rrot")!;
     
 rr.addEventListener("input", () => {
-    const rotacion = rr.value;
+    const rotacion= rr.value;
     ion.style.transform = `rotate(${rotacion}deg)`;
     ioff.style.transform = `rotate(${rotacion}deg)`;
 });
+

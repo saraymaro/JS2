@@ -1,5 +1,5 @@
-function movegreen(action) {
-    var elem = document.getElementById("myBarG");
+function movegreen(action : any) {
+    var elem : any  = document.getElementById("myBarG");
     var width = parseInt(elem.style.width) || getRandomG(30, 60);
 
     if (action === "increment") {
@@ -25,7 +25,7 @@ function movegreen(action) {
         elem!.style.backgroundColor = 'green';
     }
 }
-function getRandomG(min, max) {
+function getRandomG(min: number, max:number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 document.getElementById("brocoli")!.addEventListener("click", function () {
@@ -43,8 +43,8 @@ document.getElementById("chuche")!.addEventListener("click", function () {
 
 
 // botones pantalla amarilla
-function moveyellow(action) {
-    const elem = document.getElementById("myBarY");
+function moveyellow(action: any) {
+    const elem :any = document.getElementById("myBarY");
     let width = parseInt(elem.style.width) || getRandomY(30, 60); // Inicializa con un valor aleatorio entre 30 y 60
 
     if (action == "increment") {
@@ -71,7 +71,7 @@ function moveyellow(action) {
     }
 }
 
-function getRandomY(min, max) {
+function getRandomY(min: number, max:number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById("deberes").addEventListener("click", function () {
-    moveyellow("increment");
+    moveyellow("increment"); 
 });
 
 document.getElementById("amistad").addEventListener("click", function () {
@@ -93,8 +93,8 @@ document.getElementById("burla").addEventListener("click", function () {
 
 
 // botones pantalla roja
-function movered(action) {
-    const elem = document.getElementById("myBarR");
+function movered(action: any) {
+    const elem : any = document.getElementById("myBarR");
     let width = parseInt(elem.style.width) || getRandomR(30, 60); 
 
     if (action === "increment") {
@@ -121,7 +121,7 @@ function movered(action) {
     }
 }
 
-function getRandomR(min, max) {
+function getRandomR(min: number, max:number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -142,8 +142,8 @@ document.getElementById("game")?.addEventListener("click", function () {
 });
 
 // botones pantalla azul
-function moveblue(action) {
-    const elem = document.getElementById("myBarB");
+function moveblue(action: any) {
+    const elem : any = document.getElementById("myBarB");
     let width = parseInt(elem.style.width) || getRandomB(30, 60); 
 
     if (action === "increment") {
@@ -169,7 +169,7 @@ function moveblue(action) {
     }
 }
 
-function getRandomB(min, max) {
+function getRandomB(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -203,14 +203,14 @@ function calcularFelicidad() {
     return felicidad;
 }
 
-function updateHappiness() {
+function updateHappiness(someArgument: any) {
     const felicidad = calcularFelicidad();
     const felicidadBar = document.getElementById("myBarP")!;
     felicidadBar.style.width = felicidad + "%";
     felicidadBar.style.backgroundColor = getColorForHappiness(felicidad);
 }
 
-function getColorForHappiness(felicidad) {
+function getColorForHappiness(felicidad: number) {
     if (felicidad >= 0 && felicidad <= 30) {
         return "red";
     } else if (felicidad > 30 && felicidad < 60) {
@@ -219,6 +219,7 @@ function getColorForHappiness(felicidad) {
         return "green";
     }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     updateHappiness(null); 
 });
@@ -238,13 +239,13 @@ document.getElementById("enfado")!.addEventListener("click", updateHappiness);
 
 function updateHappiness() {
     const felicidad = calcularFelicidad();
-    const felicidadBar = document.getElementById("myBarP");
+    const felicidadBar : any = document.getElementById("myBarP");
     felicidadBar.style.width = felicidad + "%";
     felicidadBar.style.backgroundColor = getColorForHappiness(felicidad);
 
 
     
-    const ninoImage = document.getElementById("tama");
+    const ninoImage = document.getElementById("tama") as HTMLImageElement;
     if (felicidad > 60) {
         ninoImage.src = "img/saludo.png"; 
     } else if (felicidad < 30) {
